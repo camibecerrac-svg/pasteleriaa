@@ -1,0 +1,562 @@
+/* 🌸 Estilos base */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: #fff5e1;
+  color: #5d4037;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: "Pacifico", cursive;
+  color: #8b4513;
+  margin-bottom: 10px;
+}
+
+a {
+  color: #8b4513;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: #ffc0cb;
+}
+
+/* 🌸 Header */
+header {
+  background-color: #8b4513;
+  color: #fff5e1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: #fff5e1;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 8px 12px;
+}
+
+nav a:hover {
+  background-color: #ffc0cb;
+  color: #5d4037;
+}
+
+/* 🌸 Hero principal */
+.hero-section {
+  background-image: url("https://images.unsplash.com/photo-1608198093002-de4e7a3e36cb?auto=format&fit=crop&w=1920&q=80");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.45);
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 850px;
+}
+
+.hero-section h1 {
+  font-family: "Pacifico", cursive;
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+}
+
+.btn-principal {
+  background: #ffc0cb;
+  color: #5d4037;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+.btn-principal:hover {
+  background: #8b4513;
+  color: #fff5e1;
+}
+
+/* 🌸 Productos y ofertas */
+.catalogo-grid,
+.offers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+  justify-content: center;
+  padding: 30px;
+}
+
+.producto,
+.offer-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.producto:hover,
+.offer-card:hover {
+  transform: scale(1.03);
+}
+
+.producto img,
+.offer-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.card-body h3 {
+  color: #8b4513;
+  margin-bottom: 0.5rem;
+}
+
+.card-price {
+  color: #8b4513;
+  font-weight: bold;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #b0b0b0;
+  font-size: 0.9rem;
+  margin-left: 6px;
+}
+
+.btn-add {
+  background: #8b4513;
+  color: #fff5e1;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn-add:hover {
+  background: #ffc0cb;
+  color: #5d4037;
+}
+
+/* 🌸 Formularios */
+.form-page {
+  text-align: center;
+  padding: 40px 20px;
+  background: #fffaf5;
+}
+
+.form-card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 450px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.form-card label {
+  font-weight: bold;
+  color: #5d4037;
+}
+
+.form-card input,
+.form-card textarea {
+  width: 100%;
+  margin: 5px 0 15px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.form-card button {
+  background: #8b4513;
+  color: #fff5e1;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+}
+
+.form-card button:hover {
+  background: #ffc0cb;
+  color: #5d4037;
+}
+
+/* 🌸 Blog */
+.blog-section {
+  padding: 60px 20px;
+  text-align: center;
+  background: #fffaf5;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.recipe-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.recipe-card:hover {
+  transform: scale(1.03);
+}
+
+.recipe-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.recipe-info {
+  padding: 15px;
+}
+
+.btn-read {
+  display: inline-block;
+  background: #ffc0cb;
+  color: #5d4037;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.btn-read:hover {
+  background: #8b4513;
+  color: #fff5e1;
+}
+
+/* 🌸 Footer */
+footer {
+  background: #8b4513;
+  color: #fff5e1;
+  text-align: center;
+  padding: 25px;
+  margin-top: 40px;
+}
+
+footer a {
+  color: #ffc0cb;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  color: white;
+}
+
+/* 🌸 Responsividad */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+  }
+
+  .recipe-card img {
+    height: 160px;
+  }
+}
+/* 🔹 Validaciones visuales */
+.input-error {
+  border: 2px solid #e74c3c;
+  background-color: #ffeaea;
+}
+
+.error-text {
+  color: #e74c3c;
+  font-size: 0.9rem;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+.success-text {
+  color: #2ecc71;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: center;
+}
+/* 🧁 Modal de receta */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  backdrop-filter: blur(3px);
+}
+
+.modal-card {
+  background: #fffaf5;
+  padding: 25px;
+  border-radius: 20px;
+  max-width: 700px;
+  max-height: 90vh;
+  overflow-y: auto;
+  color: #5d4037;
+  position: relative;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.modal-img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #8b4513;
+  transition: 0.3s;
+}
+
+.modal-close:hover {
+  color: #ffc0cb;
+}
+
+.modal-card h2 {
+  font-family: "Pacifico", cursive;
+  color: #8b4513;
+  margin-bottom: 10px;
+}
+
+.modal-card h4 {
+  margin-top: 20px;
+  color: #5d4037;
+}
+
+.modal-card ul,
+.modal-card ol {
+  margin-left: 20px;
+  text-align: left;
+}
+.blog-detalle {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 30px;
+  background: #fffaf5;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.blog-detalle h2 {
+  text-align: center;
+  color: #8b4513;
+  margin-bottom: 20px;
+}
+
+.detalle-img {
+  display: block;
+  width: 100%;
+  max-height: 380px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 25px;
+}
+
+.blog-detalle ul, 
+.blog-detalle ol {
+  padding-left: 25px;
+  color: #5d4037;
+}
+
+.blog-detalle li {
+  margin-bottom: 8px;
+}
+
+.blog-detalle .btn-add {
+  display: block;
+  width: fit-content;
+  margin: 25px auto 0;
+  text-align: center;
+}
+.cart-page {
+  background: #fffaf5;
+  padding: 40px;
+  border-radius: 15px;
+  max-width: 900px;
+  margin: 40px auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.cart-total {
+  text-align: right;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #8b4513;
+  margin-bottom: 20px;
+}
+
+.cart-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cart-item {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.cart-item img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.cart-info h4 {
+  margin: 0 0 5px;
+  color: #5d4037;
+}
+
+.cart-info p {
+  margin: 2px 0;
+  color: #7b5548;
+}
+
+.btn-delete {
+  background: #ff9999;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-delete:hover {
+  background: #e57373;
+}
+
+.cart-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.btn-vaciar,
+.btn-comprar {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-vaciar {
+  background: #ffc0cb;
+  color: #5d4037;
+}
+
+.btn-vaciar:hover {
+  background: #ffb6c1;
+}
+
+.btn-comprar {
+  background: #8b4513;
+  color: #fff5e1;
+}
+
+.btn-comprar:hover {
+  background: #a0522d;
+}
+/* 🔹 Cada fila de label + input alineados */
+.form-container form > label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 700;
+  color: #5d4037;
+}
+
+/* Alineado horizontal para etiquetas e inputs (ej: contacto, registro) */
+.form-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.form-row label {
+  width: 150px;
+  text-align: right;
+}
+
+.form-row .input-field {
+  flex: 1;
+}
